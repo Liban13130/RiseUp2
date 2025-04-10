@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiseUp - Communication Pro</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/kiona-2" rel="stylesheet">
+                
+</head>
+<body id="accueil" class="bg-gray-50 font-kiona">
+    <header class="bg-white z-50 top-0 w-full shadow">
+    <nav
+        id="main-nav"
+        class="bg-white max-w-5xl mx-auto font-poppins py-2 flex items-center justify-between"
+      >
+
+        <!-- <div class="flex items-center justify-around max-w-6xl mx-auto"> -->
+            <a 
+            href="#accueil"
+            class="flex"
+            aria-label="Page d'accueil du site">
+            <img src="src/images/LogoRiseUp.png"
+            class="hidden md:w-20 md:inline md:mr-4"
+            alt="">
+            <span 
+            class="text-lg lg:text-xl md:hidden"
+            aria-hidden="true"
+            >
+                Rise<strong>Up</strong> 
+            </span>
+            </a>
+            <!-- <ul class="flex space-x-8 text-text-color text-lg">
+                <li><a href="#" class="hover:text-blue-300">Accueil</a></li>
+                <li><a href="#expertises" class="hover:text-blue-300">Nos expertises</a></li>
+                <li><a href="#projets" class="hover:text-blue-300">Nos projets</a></li>
+                <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+            </ul> -->
+            
+        <!-- </div> -->
+        <button
+        aria-label="toggle button"
+        aria-expanded="false"
+        id="menu-btn"
+        class="cursor-pointer w-7 md:hidden"
+        >
+        <img src="src/images/menu.svg" alt="">
+        </button>
+        <ul id="toggled-menu"
+        class="w-full absolute top-full left-0 -translate-y-full -z-10 text-gray-800 border-b border-gray-200
+        flex flex-col items-center md:static md:z-10 md:w-link-width md:transform-none md:border-none md:flex-row">
+        <li class="py-4 md:py-0 md:mr-8">
+            <a 
+            href="#accueil" 
+            class="text-lg uppercase font-semibold w-full hover:text-text-color transition">Accueil
+        </a>
+        </li>
+        <li class="py-4 md:py-0 md:mr-8">
+            <a 
+            href="#expertises" 
+            class="text-lg uppercase font-semibold w-full hover:text-text-color transition">Nos expertises
+        </a>
+        </li>
+        <li class="py-4 md:py-0 md:mr-8">
+            <a 
+            href="#projets" 
+            class="text-lg uppercase font-semibold w-full hover:text-text-color transition">Nos projets
+        </a>
+        </li>
+        <li class="py-4 md:py-0 md:mr-8">
+            <a 
+            href="#contact" 
+            class="text-lg uppercase font-semibold w-full hover:text-text-color transition">Contacts
+        </a>
+        </li>
+        </ul>
+    </nav>
+    </header>
+
+
+
+
+    <!-- PAGE D'ACCUEIL -->
+    <section class="bg-white text-white p-20 text-center h-screen flex justify-center flex-col">
+        <h1 class="text-5xl font-bold text-black">RiseUp Communication</h1>
+        <p class="text-xl mt-4 text-black">Votre succès commence avec une communication qui claque</p>
+        <button class="mt-6"><a href="mailto:nabil-13130@hotmail.fr" class="animate-bounce transition shadow mt-8 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-100 max-w-40">Demander un devis</a></button>
+    </section>
+
+
+    <!-- 1ERE SECTION -->
+    <section id="services" class="py-4 overflow-x-hidden">
+        <div class="w-1/2  h-2/3 rounded-r-full flex items-center justify-center animate-fadeLeft bg-background text-text-color">
+            <div class="h-content-height w-2/3 flex flex-col justify-center">
+                <h1 class="text-4xl font-bold">Ce que nous proposons</h1>
+                <p class=" mt-8 text-xl/8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam velit laborum hic reprehenderit libero similique? 
+                    Molestias voluptatum voluptas aliquam. Reprehenderit optio consequatur odio, dolorum adipisci ipsum ad libero dignissimos omnis 
+                    rem ipsam accusamus ducimus ex perferendis, esse totam culpa tempora rerum. 
+                    Modi sapiente itaque eaque magni ipsa fuga laborum consequuntur maxime! 
+                    Ea iusto adipisci cumque minus architecto quidem dolor nemo!
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full flex justify-end mt-20 animate-fadeRight ">
+            <div class="flex rounded-l-full w-1/2  items-center justify-center h-content-height bg-background text-text-color">
+                    <div class=" flex flex-col justify-center  h-content-height w-2/3 ">
+                        <h1 class="text-4xl font-bold">Ce que nous proposons</h1>
+                        <p class=" mt-8 text-xl/8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam velit laborum hic reprehenderit libero similique? 
+                            Molestias voluptatum voluptas aliquam. Reprehenderit optio consequatur odio, dolorum adipisci ipsum ad libero dignissimos omnis 
+                            rem ipsam accusamus ducimus ex perferendis, esse totam culpa tempora rerum. 
+                            Modi sapiente itaque eaque magni ipsa fuga laborum consequuntur maxime! 
+                            Ea iusto adipisci cumque minus architecto quidem dolor nemo!
+                        </p>
+                    </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- CONTACT -->
+    <footer id="contact" class="bg-background text-text-color p-6 text-center">
+        <p class="mb-2">RiseUp - Contactez-nous</p>
+        <a href="mailto:nabil-13130@hotmail.fr" class="underline hover:text-blue-300">nabil-13130@hotmail.fr</a>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
