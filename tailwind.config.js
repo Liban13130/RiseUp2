@@ -27,10 +27,15 @@ module.exports = {
             "0%": { opacity: "0", transform: "translateX(-100%)" },
             "100%": { opacity: "1", transform: "translateX(0)" },
           },
+          "infinite-scroll": {
+            "0%": {transform: "translateX(0)"},
+            "100%": {transform: "translateX(calc(-50% - 20px))"},
+          }
         },
         animation: {
           fadeRight: "fadeRight 1s ease-out",
           fadeLeft: "fadeLeft 1s ease-out",
+          "infinite-scroll": "infinite-scroll 3s linear infinite"
         },
       },
     },
