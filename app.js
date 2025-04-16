@@ -44,6 +44,44 @@ const temoignages = [
 
 ]
 
-temoignages.forEach(temoignage => {
-    console.log(temoignage.nom);
+// temoignages.forEach(temoignage => {
+//     console.log(temoignage.nom);
+// })
+
+const titleHome = "RISEUP COMMUNICATION";
+const element = document.getElementById("typewritter");
+let index = 0
+
+function typeLetter(){
+    if(index < titleHome.length){
+        element.textContent += titleHome.charAt(index);
+        index++
+        setTimeout(typeLetter, 100)
+    }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    typeLetter()
+})
+
+
+window.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.fade-left, .fade-right');
+
+    elements.forEach((element) => {
+        const rect = element.getBoundingClientRect()
+        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (inView) {
+            element.classList.add('active');
+          } else {
+            element.classList.remove('active');
+          }
+    })
+
+
+
+
+    
+
 })

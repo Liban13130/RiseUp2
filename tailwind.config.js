@@ -4,19 +4,26 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          "text-color": "#C1A156"
+          "color-gold": "#C1A156",
+          "color-blue": "#115462",
         },
         backgroundColor: {
           "background": "#115462",
         },
         width: {
-          "link-width": "36rem"
+          "link-width": "36rem",
+          'large-width': "460px"
         },
         height: {
-          "content-height": "30rem"
+          "content-height": "30rem",
+          "responsive-height": "41rem",
+          "long-height": "460px"
         },
         fontFamily: {
           "kiona": "Kiona"
+        },
+        backgroundImage: {
+          "bg-image": "url('src/images/background-landing.jpg');"
         },
         keyframes: {
           fadeRight: {
