@@ -12,12 +12,14 @@ module.exports = {
         },
         width: {
           "link-width": "36rem",
-          'large-width': "460px"
+          'large-width': "460px",
+          'card-width': "420px",
         },
         height: {
           "content-height": "30rem",
           "responsive-height": "41rem",
-          "long-height": "460px"
+          "long-height": "460px",
+          "card-height": "570px"
         },
         fontFamily: {
           "kiona": "Kiona"
@@ -26,6 +28,10 @@ module.exports = {
           "bg-image": "url('src/images/background-landing.jpg');"
         },
         keyframes: {
+          blink: {
+            '0%, 100%': { opacity : "1" },
+            '50%': { opacity : 0 }
+          },
           fadeRight: {
             "0%": { opacity: "0", transform: "translateX(100%)" },
             "100%": { opacity: "1", transform: "translateX(0)" },
@@ -33,6 +39,10 @@ module.exports = {
           fadeLeft: {
             "0%": { opacity: "0", transform: "translateX(-100%)" },
             "100%": { opacity: "1", transform: "translateX(0)" },
+          },
+          fadeLeftClosed: {
+            "0%": { opacity: "1", transform: "translateX(0%)" },
+            "100%": { opacity: "0", transform: "translateX(-100%)" },
           },
           "infinite-scroll": {
             "0%": {transform: "translateX(0)"},
@@ -42,7 +52,9 @@ module.exports = {
         animation: {
           fadeRight: "fadeRight 1s ease-out",
           fadeLeft: "fadeLeft 1s ease-out",
-          "infinite-scroll": "infinite-scroll 3s linear infinite"
+          fadeLeftClosed: "fadeLeftClosed 1s ease-out",
+          "infinite-scroll": "infinite-scroll 3s linear infinite",
+          blink: "blink 0.7s steps(1) infinite"
         },
       },
     },
