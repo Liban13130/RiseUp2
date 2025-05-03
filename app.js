@@ -166,7 +166,7 @@ rightArrowIcon.forEach(icon => {
 
         for (let index = 0; index < temoignages[position].note; index++) {
             let star = document.createElement('img');
-            star.src = "./src/images/printer.svg";
+            star.src = "./src/images/lesetoiles.svg";
             star.classList.add("w-6", "h-6"); // optionnel : taille adaptée
             ratingBlock.appendChild(star);
         }
@@ -188,9 +188,12 @@ leftArrowIcon.forEach(icon => {
         ratingBlock.innerHTML = ""
         for (let index = 0; index < temoignages[position].note; index++) {
             let star = document.createElement('img');
-            star.src = "./src/images/star.svg";
-            star.classList.add("w-6", "h-6"); // optionnel : taille adaptée
+            star.style.background = "red"
+            star.src = "./src/images/lesetoiles.svg";
+            star.classList.add("w-10", "h-10", "mx-0.5");
             ratingBlock.appendChild(star);
         }
     })
 });
+
+console.log(+{});

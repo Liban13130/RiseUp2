@@ -22,7 +22,8 @@ module.exports = {
           "card-height": "570px"
         },
         fontFamily: {
-          "kiona": "Kiona"
+          "kiona": "Kiona",
+          "cocon": "Cocon"
         },
         backgroundImage: {
           "bg-image": "url('src/images/background-landing.jpg');"
