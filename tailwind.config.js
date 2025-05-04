@@ -13,13 +13,17 @@ module.exports = {
         width: {
           "link-width": "36rem",
           'large-width': "460px",
-          'card-width': "420px",
+          'card-width': "423px",
+          'avis-width': "1000px",
         },
         height: {
           "content-height": "30rem",
           "responsive-height": "41rem",
           "long-height": "460px",
-          "card-height": "570px"
+          "card-height": "565px"
+        },
+        lineHeight: {
+          "title-space": "9.8rem"
         },
         fontFamily: {
           "kiona": "Kiona",
@@ -28,10 +32,19 @@ module.exports = {
         backgroundImage: {
           "bg-image": "url('src/images/background-landing.jpg');"
         },
+        boxShadow: {
+          "double-border": "0 0 0 5px #115462, inset 0 0 0 5px #C1A156"
+        },
+        outlineWidth: {
+          "width": "10px"
+        },
+        inset: {
+          "double-border": "0 0 0 8px #3966dd"
+        },
         keyframes: {
           blink: {
-            '0%, 100%': { opacity : "1" },
-            '50%': { opacity : 0 }
+            '0%, 100%': { opacity : "0" },
+            '50%': { opacity : "0" }
           },
           fadeRight: {
             "0%": { opacity: "0", transform: "translateX(100%)" },

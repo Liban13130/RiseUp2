@@ -51,7 +51,7 @@ menuBtn.addEventListener("click", () => {
 
 
 // Titre animation
-const titleHome = "RISE UP COMMUNICATION";
+// const titleHome = "RISE UP COMMUNICATION";
 const element = document.getElementById("typewritter");
 let index = 0
 
@@ -123,7 +123,8 @@ const temoignages = [
             Merci pour votre professionnalisme !`,
         nom: "Florent Hibon",
         provenance: "Sapeur pompier de paris",
-        note: 3,
+        note: 5,
+        svg: `./src/images/lesetoiles.svg`
     },
     {
         avis:`Hellal voluptatum voluptas aliquam. Reprehenderit optio consequatur odio, dolorum adipisci ipsum ad libero dignissimos omnis 
@@ -137,7 +138,7 @@ const temoignages = [
             Modi sapiente itaque eaque magni ipsa fuga laborum consequuntur maxime!`,
         nom: "Ahmed",
         provenance: "Directeur de Ecolasia",
-        note: 5,
+        note: 3,
     },
 
 ]
@@ -146,7 +147,7 @@ const temoignages = [
 testimonyContent.textContent = temoignages[0].avis
 testimonyClient.textContent = temoignages[0].nom
 testimonyFrom.textContent = temoignages[0].provenance
-ratingBlock.textContent = temoignages[0].note
+ratingBlock.textContent = temoignages[0].svg
 
 
 
@@ -163,11 +164,11 @@ rightArrowIcon.forEach(icon => {
         testimonyClient.textContent = temoignages[position].nom
         testimonyFrom.textContent = temoignages[position].provenance
         ratingBlock.innerHTML = ""
-
+        
         for (let index = 0; index < temoignages[position].note; index++) {
             let star = document.createElement('img');
             star.src = "./src/images/lesetoiles.svg";
-            star.classList.add("w-6", "h-6"); // optionnel : taille adaptée
+            star.classList.add("h-12");
             ratingBlock.appendChild(star);
         }
     })
@@ -188,9 +189,8 @@ leftArrowIcon.forEach(icon => {
         ratingBlock.innerHTML = ""
         for (let index = 0; index < temoignages[position].note; index++) {
             let star = document.createElement('img');
-            star.style.background = "red"
             star.src = "./src/images/lesetoiles.svg";
-            star.classList.add("w-10", "h-10", "mx-0.5");
+            star.classList.add("h-12");
             ratingBlock.appendChild(star);
         }
     })
