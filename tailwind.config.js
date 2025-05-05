@@ -44,7 +44,7 @@ module.exports = {
         keyframes: {
           blink: {
             '0%, 100%': { opacity : "0" },
-            '50%': { opacity : "0" }
+            '50%': { opacity : "1" }
           },
           fadeRight: {
             "0%": { opacity: "0", transform: "translateX(100%)" },

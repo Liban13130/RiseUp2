@@ -51,15 +51,21 @@ menuBtn.addEventListener("click", () => {
 
 
 // Titre animation
-// const titleHome = "RISE UP COMMUNICATION";
+const titleHome = "RISE UP|COMMUNICATION";
+const text = document.getElementById("text");
+const cursor = document.getElementById("cursor");
 const element = document.getElementById("typewritter");
 let index = 0
 
-function typeLetter(){
-    if(index < titleHome.length){
-        element.textContent += titleHome.charAt(index);
-        index++
-        setTimeout(typeLetter, 100)
+function typeLetter() {
+    if (index < titleHome.length) {
+        const char = titleHome.charAt(index);
+
+        text.innerHTML += (char === "|" ? "<br>" : char);
+        index++;
+        setTimeout(typeLetter, 100);
+    }else{
+        cursor.remove()
     }
 }
 
@@ -196,4 +202,3 @@ leftArrowIcon.forEach(icon => {
     })
 });
 
-console.log(+{});
