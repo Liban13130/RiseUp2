@@ -174,7 +174,7 @@ rightArrowIcon.forEach(icon => {
         for (let index = 0; index < temoignages[position].note; index++) {
             let star = document.createElement('img');
             star.src = "./src/images/lesetoiles.svg";
-            star.classList.add("h-12");
+            star.classList.add("h-16");
             ratingBlock.appendChild(star);
         }
     })
@@ -196,7 +196,7 @@ leftArrowIcon.forEach(icon => {
         for (let index = 0; index < temoignages[position].note; index++) {
             let star = document.createElement('img');
             star.src = "./src/images/lesetoiles.svg";
-            star.classList.add("h-12");
+            star.classList.add("h-16");
             ratingBlock.appendChild(star);
         }
     })
