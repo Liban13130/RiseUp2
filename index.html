@@ -303,6 +303,57 @@
 
     <!-- SECTION CONTACT -->
 
+      <header class="w-full flex justify-center items-center">
+        <div class="w-3/4 flex justify-center items-center mb-20">
+          <div class="w-1/2 h-52 hidden xl:block xl:w-full xl:h-form-height xl:rounded-md bg-form">
+            
+          </div>
+          <div class="w-full h-form-height bg-color-blue rounded-md px-6  flex justify-around items-center relative shadow-2xl">
+            <form id="contact-form" action="" method="post" class="inline w-full">
+              
+                <div class="my-10">
+                  <h1 class="absolute top-8 right-1/2 -translate-y-1/2 translate-x-1/2 text-center text-color-gold text-2xl w-full">Demande de devis</h1>
+                </div>
+
+                <div class="flex gap-6">
+                  <input type="text" name="lastname" id="user_lastname" required class="w-1/2 px-3 py-3 mb-10 outline-none rounded-md bg-gray-300" placeholder="Nom">
+                  <input type="text" name="firstname" id="user_firstname" required class="w-1/2 px-3 py-3 mb-10 outline-none rounded-md" placeholder="Prénom">
+                </div>
+                
+                
+                <!-- <label for="email" class="block">Email :</label> -->
+                <div>
+                  <input type="email" name="email" id="user_email" required class="w-full px-3 py-3 mb-10 outline-none rounded-md" placeholder="Adresse mail">
+                  <input type="number" name="phone" id="user_phone" required class="w-full px-3 py-3 mb-10 outline-none rounded-md" placeholder="Numéro de téléphone">
+                </div>
+                
+                <!-- <label for="objet" class="block">Service demandé :</label> -->
+                <div>
+                  <label for="" class="text-color-gold">Service demandé : </label>
+                  <select name="object" id="user_object" class="px-1 py-1 mb-5 w-36 outline-none rounded-md">
+                    <option value="Impression">Impression</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Dédicace">Dédicace</option>
+                  </select>
+                </div>
+                
+                <div class="mb-10">
+                  <textarea name="message" id="user_message" required class="w-full h-56 rounded-md py-1 px-2 outline-none resize-none" placeholder="Parlez nous de votre projet..."></textarea>
+                  <span class="text-xs">*Decrivez nous vos ambitions </span>
+                </div>
+                <div class="flex justify-center items-center">
+                  <button type="submit" class="bg-color-gold text-white px-8 py-2 rounded-xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-md
+                                                                                                                hover:bg-white hover:text-color-blue">
+                        Envoyez</button>
+                </div>
+              
+            </form>
+          </div>
+        </div>
+      </header>
+
+    <!-- SECTION FOOTER -->
+
     <footer id="contact" class="w-full bg-gray-200 flex flex-col">
       <div class="mx-auto">
         <img src="src/images/LogoRiseUp.png" alt="Logo de l'entreprise" class="h-32 pt-5">
@@ -343,6 +394,7 @@
         <h6>Copyright &coprod;2025. Tous droits réservés</h6> 
       </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -202,3 +202,34 @@ leftArrowIcon.forEach(icon => {
     })
 });
 
+
+
+// Envoi de mail 
+const form = document.getElementById('contact-form');
+const email = document.getElementById('user_object');
+(function(){
+      emailjs.init({
+        publicKey: "VeQfgWQDCzwidBq15",
+      });
+   })();
+
+
+
+form.addEventListener('submit',(e) => {
+    e.preventDefault()
+
+    const formData = new FormData(form)
+    // console.log(formData);
+    
+
+    emailjs.sendForm("service_1mm13t8", "template_98o7ln9", form)
+    .then(response =>  {
+        console.log("Message envoyé : ", response);
+        alert('Message envoyé avec succès !');
+    }, error => {
+        console.log("Erreur : ", error);
+        alert("Oups, quelque chose à mal tourné...")
+    })
+    
+
+})

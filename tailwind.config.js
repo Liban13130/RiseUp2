@@ -20,7 +20,8 @@ module.exports = {
           "content-height": "30rem",
           "responsive-height": "41rem",
           "long-height": "460px",
-          "card-height": "565px"
+          "card-height": "565px",
+          "form-height": "750px",
         },
         lineHeight: {
           "title-space": "9.8rem"

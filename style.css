@@ -47,6 +47,13 @@
   background-repeat: no-repeat;
 }
 
+.bg-form {
+  background-image: url('public/send-message.jpg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
 /* From Uiverse.io by chase2k25 */ 
 .futuristic-pattern {
   width: 100%;
