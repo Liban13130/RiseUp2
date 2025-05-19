@@ -21,7 +21,7 @@ module.exports = {
           "responsive-height": "41rem",
           "long-height": "460px",
           "card-height": "565px",
-          "form-height": "750px",
+          "form-height": "830px",
         },
         lineHeight: {
           "title-space": "9.8rem"

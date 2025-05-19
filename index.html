@@ -303,16 +303,16 @@
 
     <!-- SECTION CONTACT -->
 
-      <header class="w-full flex justify-center items-center">
-        <div class="w-3/4 flex justify-center items-center mb-20">
-          <div class="w-1/2 h-52 hidden xl:block xl:w-full xl:h-form-height xl:rounded-md bg-form">
+      <header class="w-full flex justify-center items-center transition-all duration-300 ease-in-out">
+        <div class="w-3/4 flex justify-center items-center mb-20 transition-all duration-300 ease-in-out">
+          <div class="w-1/2 h-52 hidden xl:block xl:w-full xl:h-form-height xl:rounded-md bg-form transition-all duration-300 ease-in-out">
             
           </div>
-          <div class="w-full h-form-height bg-color-blue rounded-md px-6  flex justify-around items-center relative shadow-2xl">
-            <form id="contact-form" action="" method="post" class="inline w-full">
+          <div class="w-full bg-color-blue rounded-md px-6 py-6  flex justify-around items-center relative shadow-2xl">
+            <form id="contact-form" action="" method="post" class="ease-in-out w-full max-h-[760px] transition-[max-height]">
               
                 <div class="my-10">
-                  <h1 class="absolute top-8 right-1/2 -translate-y-1/2 translate-x-1/2 text-center text-color-gold text-2xl w-full">Demande de devis</h1>
+                  <h1 class="absolute top-8 right-1/2 -translate-y-1/2 translate-x-1/2 text-center text-white text-2xl w-full">Demande de devis</h1>
                 </div>
 
                 <div class="flex gap-6">
@@ -329,17 +329,50 @@
                 
                 <!-- <label for="objet" class="block">Service demandé :</label> -->
                 <div>
-                  <label for="" class="text-color-gold">Service demandé : </label>
-                  <select name="object" id="user_object" class="px-1 py-1 mb-5 w-36 outline-none rounded-md">
-                    <option value="Impression">Impression</option>
-                    <option value="Marketing">Marketing</option>
+                  <label for="" class="text-white">Service demandé : </label>
+                  <select name="object" id="user_object" class="px-1 py-1 mb-5 w-36 outline-none rounded-md text-color-blue">
                     <option value="Dédicace">Dédicace</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Personnalisation textile">Personnalisation textile</option>
+                    <option value="Impression">Impression</option>
+                  </select>
+                </div>
+              
+                  <div id="displayTextile" class="opacity-0 max-h-0 overflow-hidden scale-95 transition-all duration-500 ease-in-out">
+                  <label for="" class="text-white">Quantité : </label>
+                  <select name="quantity" class="px-1 py-1 mb-5 w-36 outline-none rounded-md text-color-blue">
+                    <option value="100-300">100-300</option>
+                    <option value="300-500">300-500</option>
+                    <option value="500-700">500-700</option>
+                    <option value="700 ou plus">700 ou plus</option>
+                  </select>
+                  <label for="" class="text-white">Type d'impression : </label>
+                  <select name="print" class="px-1 py-1 mb-5 w-36 outline-none rounded-md text-color-blue">
+                    <option value="Standard">Standard</option>
+                    <option value="Brodé">Brodé</option>
+                    <option value="Peint">Peint</option>
+                    <option value="Flocage">Flocage</option>
+                  </select>
+                  <label for="" class="text-white">Type de textile : </label>
+                  <select name="textile_type" class="px-1 py-1 mb-5 w-36 outline-none rounded-md text-color-blue">
+                    <option value="Tee-shirt">T-shirt</option>
+                    <option value="Sweat">Sweat</option>
+                    <option value="Casquette">Casquette</option>
+                    <option value="Tote Bag">Tote bag</option>
+                  </select>
+                  <label for="" class="text-white">Zone :</label>
+                  <select name="personalisation_zone" class="px-1 py-1 mb-5 w-36 outline-none rounded-md text-color-blue">
+                    <option value="Devant">Devant</option>
+                    <option value="Dos">Dos</option>
+                    <option value="Manche">Manche</option>
                   </select>
                 </div>
                 
+                
+                
                 <div class="mb-10">
                   <textarea name="message" id="user_message" required class="w-full h-56 rounded-md py-1 px-2 outline-none resize-none" placeholder="Parlez nous de votre projet..."></textarea>
-                  <span class="text-xs">*Decrivez nous vos ambitions </span>
+                  <span id="info_supplementaire" class="opacity-0 max-h-0 overflow-hidden scale-95 transition-all duration-500 ease-in-out text-xs text-white">*Avez-vous des instructions supplémentaires ? Une couleur, une quantité précise, une zone en particulier etc... </span>
                 </div>
                 <div class="flex justify-center items-center">
                   <button type="submit" class="bg-color-gold text-white px-8 py-2 rounded-xl font-semibold hover:-translate-y-2 transition-all duration-300 hover:shadow-md

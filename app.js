@@ -224,12 +224,44 @@ form.addEventListener('submit',(e) => {
 
     emailjs.sendForm("service_1mm13t8", "template_98o7ln9", form)
     .then(response =>  {
-        console.log("Message envoyé : ", response);
         alert('Message envoyé avec succès !');
+        form.reset()
     }, error => {
-        console.log("Erreur : ", error);
         alert("Oups, quelque chose à mal tourné...")
     })
-    
 
+})
+
+// Personnalisation du formulaire en fonction du service demandé
+const services = document.getElementById('user_object')
+const displayingTextile = document.getElementById('displayTextile')
+const infoTextArea = document.getElementById('info_supplementaire')
+
+
+services.addEventListener('change', () => {
+    if(services.value === "Personnalisation textile"){
+        // Transition sur le select
+        displayingTextile.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+        displayingTextile.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
+
+        //Transition sur le formulaire
+        form.classList.add("max-h-[1000px]")
+        form.classList.remove("max-h-[760px]")
+
+        // Transition sur info en bas du textarea
+        infoTextArea.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+        infoTextArea.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
+    }else{
+        // Transition sur le select
+        displayingTextile.classList.add("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+        displayingTextile.classList.remove("opacity-1", "scale-100", "max-h-[1000px]",)
+
+        //Transition sur le formulaire
+        form.classList.remove("max-h-[1000px]")
+        form.classList.add("max-h-[760px]")
+
+        // Transition sur info en bas du textarea
+        infoTextArea.classList.add("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+        infoTextArea.classList.remove("opacity-1", "scale-100", "max-h-[1000px]",)
+    }
 })

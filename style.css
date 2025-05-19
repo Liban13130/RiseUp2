@@ -41,7 +41,7 @@
 }
 
 .bg-landing {
-  background-image: url('public/business-people-blue-background.jpg');
+  background-image: url('src/images/Banniere.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
