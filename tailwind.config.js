@@ -31,7 +31,7 @@ module.exports = {
           "cocon": "Cocon"
         },
         backgroundImage: {
-          "bg-image": "url('src/images/background-landing.jpg');"
+          "bg-image": "url('src/images/ChatGPT_Image_19_mai_2025_a_16_14_14.png.jpg');"
         },
         boxShadow: {
           "double-border": "0 0 0 5px #115462, inset 0 0 0 5px #C1A156"

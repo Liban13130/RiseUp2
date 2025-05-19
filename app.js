@@ -235,6 +235,7 @@ form.addEventListener('submit',(e) => {
 // Personnalisation du formulaire en fonction du service demandé
 const services = document.getElementById('user_object')
 const displayingTextile = document.getElementById('displayTextile')
+const displayingPrint = document.getElementById('displayPrint')
 const infoTextArea = document.getElementById('info_supplementaire')
 
 
@@ -243,6 +244,8 @@ services.addEventListener('change', () => {
         // Transition sur le select
         displayingTextile.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
         displayingTextile.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
+        displayingPrint.classList.add("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+        displayingPrint.classList.remove("opacity-1", "scale-100", "max-h-[1000px]",)
 
         //Transition sur le formulaire
         form.classList.add("max-h-[1000px]")
@@ -251,10 +254,29 @@ services.addEventListener('change', () => {
         // Transition sur info en bas du textarea
         infoTextArea.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
         infoTextArea.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
-    }else{
+    }
+    else if(services.value === "Impression"){
+        // Transition sur le select
+        displayingPrint.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+        displayingPrint.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
+        displayingTextile.classList.remove("opacity-1", "scale-100", "max-h-[1000px]",)
+        displayingTextile.classList.add("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+
+
+         //Transition sur le formulaire
+        form.classList.add("max-h-[1000px]")
+        form.classList.remove("max-h-[760px]")
+
+        // Transition sur info en bas du textarea
+        infoTextArea.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+        infoTextArea.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
+    }
+    else{
         // Transition sur le select
         displayingTextile.classList.add("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
         displayingTextile.classList.remove("opacity-1", "scale-100", "max-h-[1000px]",)
+        displayingPrint.classList.add("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
+        displayingPrint.classList.remove("opacity-1", "scale-100", "max-h-[1000px]",)
 
         //Transition sur le formulaire
         form.classList.remove("max-h-[1000px]")
@@ -265,3 +287,12 @@ services.addEventListener('change', () => {
         infoTextArea.classList.remove("opacity-1", "scale-100", "max-h-[1000px]",)
     }
 })
+
+
+
+// QUantité personalisation textile
+// de 1 a 9 
+// de 10 a 24
+// 25 - 49
+// 50 - 100
+// 100 - plus
