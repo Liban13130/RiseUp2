@@ -255,17 +255,16 @@ services.addEventListener('change', () => {
         infoTextArea.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
         infoTextArea.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
     }
-    else if(services.value === "Impression"){
+    else if(services.value === "Supports de Communication"){
         // Transition sur le select
         displayingPrint.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
         displayingPrint.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
+    
         displayingTextile.classList.remove("opacity-1", "scale-100", "max-h-[1000px]",)
         displayingTextile.classList.add("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
 
-
          //Transition sur le formulaire
-        form.classList.add("max-h-[1000px]")
-        form.classList.remove("max-h-[760px]")
+        
 
         // Transition sur info en bas du textarea
         infoTextArea.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
