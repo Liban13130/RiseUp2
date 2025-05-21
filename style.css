@@ -47,6 +47,11 @@
   background-repeat: no-repeat;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .bg-form {
   background-image: url('public/send-message.jpg');
   background-size: cover;

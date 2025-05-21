@@ -207,6 +207,7 @@ leftArrowIcon.forEach(icon => {
 // Envoi de mail 
 const form = document.getElementById('contact-form');
 const email = document.getElementById('user_object');
+
 (function(){
       emailjs.init({
         publicKey: "VeQfgWQDCzwidBq15",
@@ -214,6 +215,7 @@ const email = document.getElementById('user_object');
    })();
 
 
+const success = document.getElementById('success_message')
 
 form.addEventListener('submit',(e) => {
     e.preventDefault()
@@ -221,10 +223,17 @@ form.addEventListener('submit',(e) => {
     const formData = new FormData(form)
     // console.log(formData);
     
-
+    
     emailjs.sendForm("service_1mm13t8", "template_98o7ln9", form)
     .then(response =>  {
-        alert('Message envoyé avec succès !');
+        document.body.classList.add('overflow-hidden', 'h-screen');
+        success.classList.remove("hidden")
+        success.classList.add("flex")
+        setTimeout(() => {
+            document.body.classList.remove('overflow-hidden', 'h-screen');
+            success.classList.add('hidden')
+            success.classList.remove('flex')
+        }, 3000);
         form.reset()
     }, error => {
         alert("Oups, quelque chose à mal tourné...")
@@ -237,10 +246,19 @@ const services = document.getElementById('user_object')
 const displayingTextile = document.getElementById('displayTextile')
 const displayingPrint = document.getElementById('displayPrint')
 const infoTextArea = document.getElementById('info_supplementaire')
+const selects = document.querySelectorAll('select[data-service]')
 
 
 services.addEventListener('change', () => {
-    if(services.value === "Personnalisation textile"){
+
+    const selected = services.value.toLowerCase()
+
+    selects.forEach(select => {
+    const belongsTo = select.getAttribute('data-service');
+    select.disabled = (belongsTo !== selected);
+  });
+
+    if(services.value === "textile"){
         // Transition sur le select
         displayingTextile.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
         displayingTextile.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
@@ -255,7 +273,7 @@ services.addEventListener('change', () => {
         infoTextArea.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
         infoTextArea.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
     }
-    else if(services.value === "Supports de Communication"){
+    else if(services.value === "support"){
         // Transition sur le select
         displayingPrint.classList.remove("opacity-0", "scale-95", "max-h-0", "overflow-hidden")
         displayingPrint.classList.add("opacity-1", "scale-100", "max-h-[1000px]",)
